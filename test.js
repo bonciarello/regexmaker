@@ -25,7 +25,7 @@ function test(name, fn) {
 // --- Load the app ---
 const html = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
 const dom = new JSDOM(html, {
-  url: 'https://cristianporco.it/app/regexmaker/',
+  url: 'https://github.com/bonciarello/regexmaker/',
   runScripts: 'dangerously',
   resources: 'usable'
 });
@@ -66,7 +66,7 @@ test('meta description presente', () => {
 test('canonical URL corretto', () => {
   const link = doc.querySelector('link[rel="canonical"]');
   ok(link, 'manca canonical');
-  is(link.href, 'https://cristianporco.it/app/regexmaker/');
+  is(link.href, 'https://github.com/bonciarello/regexmaker/');
 });
 
 test('OG tags presenti', () => {
